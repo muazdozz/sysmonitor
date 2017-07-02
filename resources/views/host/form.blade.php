@@ -277,13 +277,9 @@
  		fetchHost:function(){
 
  			let app = this;
-
-
-
  			axios.get('http://' + this.ipaddress + ':4321/api')
 			  .then(function (response) {
 			    console.log(response);
-
 			    // app.ipaddress = response.data.hostname;
 			    app.os_hostname = response.data.os_hostname;
 				app.os_distro = response.data.os_distro;
